@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Winners</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Game Winners Board</h1>
+    <div class="container">
+        <div class="column">
+            <h2>Today's Winners (<span id="today-date"></span>)</h2>
+            <div id="today-games"></div>
+        </div>
+        <div class="column">
+            <h2>Yesterday's Winners (<span id="yesterday-date"></span>)</h2>
+            <div id="yesterday-games"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
