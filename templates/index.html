@@ -6,14 +6,26 @@
 </head>
 <body>
     <h1>Game Winners Board</h1>
-    <div class="container">
-        <div class="column">
-            <h2>Today's Winners (<span id="today-date"></span>)</h2>
-            <div id="today-games"></div>
+    <div class="main-container">
+        <div class="games-container">
+            <div class="column">
+                <h2>Today's Winners (<span id="today-date"></span>)</h2>
+                <div id="today-games"></div>
+            </div>
+            <div class="column">
+                <h2>Yesterday's Winners (<span id="yesterday-date"></span>)</h2>
+                <div id="yesterday-games"></div>
+            </div>
         </div>
-        <div class="column">
-            <h2>Yesterday's Winners (<span id="yesterday-date"></span>)</h2>
-            <div id="yesterday-games"></div>
+        <div class="stats-container">
+            <div class="leaderboard">
+                <h2>Winner Leaderboard</h2>
+                <div id="winner-counts"></div>
+            </div>
+            <div class="funny-comments">
+                <h2>Silly Happenings</h2>
+                <div id="comment-display"></div>
+            </div>
         </div>
     </div>
     <script src="{{ url_for('static', filename='app.js') }}"></script>

@@ -4,12 +4,23 @@ body {
     background-color: #f0f0f0;
 }
 
-.container {
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.games-container {
     display: flex;
     gap: 20px;
 }
 
-.column {
+.stats-container {
+    display: flex;
+    gap: 20px;
+}
+
+.column, .leaderboard, .funny-comments {
     flex: 1;
     background: white;
     padding: 20px;
@@ -17,41 +28,99 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
-    color: #333;
+.leaderboard-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
 }
 
-.game-entry {
-    margin-bottom: 15px;
-    padding: 10px;
-    background: #f8f8f8;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.game-entry:hover {
-    background: #f0f0f0;
-}
-
-.game-type {
+.rank {
     font-weight: bold;
     color: #666;
+    margin-right: 10px;
 }
 
-.winner {
+.leaderboard-entry {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.game-breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+.game-stat {
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+}
+
+.game-name {
+    color: #666;
+    text-transform: capitalize;
+}
+
+.game-wins {
+    margin-left: 4px;
+    font-weight: bold;
     color: #2c5282;
 }
 
-.time {
-    color: #666;
-    font-size: 0.9em;
+.top-three {
+    background-color: #f8f8f8;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.total-wins {
+    font-weight: bold;
+    color: #2c5282;
 }
 
-.game-entry {
-    animation: fadeIn 0.5s ease-in;
+.leaderboard-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.top-three {
+    font-weight: bold;
+    background-color: #f8f8f8;
+}
+
+.top-three .win-count {
+    color: #2c5282;
+}
+
+.win-count {
+    font-weight: bold;
+    color: #2c5282;
+}
+
+#comment-display {
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    transition: opacity 0.5s ease;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
 }
